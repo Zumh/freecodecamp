@@ -1,2 +1,2 @@
-// This is the single in-line comment
+// This is the single in-line comment.
 /* This is the multiple line comment */
