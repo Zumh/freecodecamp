@@ -1,0 +1,3 @@
+1. syntax errors that prevent a program from running
+2. runtime errors when code fails to execute or has unexpected behavior
+3. semantic (or logical) errors when code doesn't do what it's meant to.
