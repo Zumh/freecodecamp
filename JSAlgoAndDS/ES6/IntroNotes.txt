@@ -1,0 +1,14 @@
+Introduction to the ES6 Challenges
+
+ECMAScript = standardized version of JavaScript
+Goal = unifying the language's specifications and features.
+
+Recent standardized version -> ECMAScript 6
+It has powerful features and challenges
+* Arrow functions
+* Classes
+* Modules
+* Promises
+* Generators
+* let and const
+
