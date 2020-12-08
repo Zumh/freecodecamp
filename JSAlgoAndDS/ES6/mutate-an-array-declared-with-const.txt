@@ -1,0 +1,14 @@
+/*
+An array is declared as const s = [5, 7, 2]. Change the array to [2, 5, 7] using various element assignments.
+*/
+const s = [5, 7, 2];
+function editInPlace() {
+  // Only change code below this line
+  const temp = [2,5,7];
+  // Using s = [2, 5, 7] would be invalid
+  for (let i = 0 ; i < s.length; i++) {
+    s[i] = temp[i];
+  }
+  // Only change code above this line
+}
+editInPlace();
