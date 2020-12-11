@@ -1,0 +1,21 @@
+/**
+ * Basic Algorithm Scripting: Find the Longest Word in a String
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+ */
+function findLongestWordLength(str) {
+  let maxWordLength = 0;
+  let currentWordLength = 0;
+  var temp = str.split(' ');
+
+  for(let wordIndex in temp){
+    currentWordLength = temp[wordIndex].length;
+    if (currentWordLength > maxWordLength){
+      maxWordLength = currentWordLength; 
+    }
+  }
+  return(maxWordLength);
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
