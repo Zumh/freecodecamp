@@ -1,0 +1,24 @@
+/**
+ * Basic Algorithm Scripting: Truncate a String
+Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
+ */
+function truncateString(str, num) {
+  //check if the string length and given length is the same
+  //if the same return the string
+  //elese truncate the string from 0 position to the given num
+  //Then concatenate...
+  var dots = "...";
+  var finalString = "";
+  if (str.length > num){
+    finalString = str.slice(0, num);
+    finalString += dots;
+  } else {
+    finalString = str;
+  }
+  console.log(finalString);
+  
+  return finalString;
+}
+
+truncateString("A-",1);
+//truncateString("A-tisket a-tasket A green and yellow basket", 8);

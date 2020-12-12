@@ -1,0 +1,25 @@
+/**
+ * 
+Basic Algorithm Scripting: Title Case a Sentence
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".
+ */
+function titleCase(str) {
+  //turn the string to lower case
+  //split the string
+  var finalString = "";
+  var spaceOrNospace = " ";
+  console.log(str.length)
+  str = str.toLowerCase().split(' ');
+  for (let i = 0; i < str.length; i++) {
+    if (i == str.length-1){
+      spaceOrNospace = "";
+    }
+    finalString += str[i].charAt(0).toUpperCase() + str[i].slice(1) + spaceOrNospace;
+  }
+
+  return finalString;
+}
+
+titleCase("I'm a little tea pot");
