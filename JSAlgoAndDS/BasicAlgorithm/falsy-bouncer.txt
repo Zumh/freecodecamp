@@ -1,0 +1,21 @@
+/**
+ * Basic Algorithm Scripting: Falsy Bouncer
+Remove all falsy values from an array.
+
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+Hint: Try converting each value to a Boolean.
+ */
+function bouncer(arr) {
+  var falsy = [undefined, null, NaN, 0, "", false];
+  var result = "";
+  for ( let i = 0; i < falsy.length; i++){
+    result = arr.filter(arr => !!arr != !!falsy[i]);  
+  }
+  
+  
+  return result;
+}
+
+bouncer([null, NaN, 1, 2, undefined]);
+bouncer([7, "ate", "", false, 9]);
