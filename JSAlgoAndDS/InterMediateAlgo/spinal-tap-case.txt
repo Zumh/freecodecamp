@@ -1,0 +1,13 @@
+/*
+Intermediate Algorithm Scripting: Spinal Tap Case
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+*/
+function spinalCase(str) {
+  //capital letter, none alphabet ([a-z])(?=[A-Z], '$1-') <-between small and big letter
+  return(str.replace(/[^\w]|\_|([a-z])(?=[A-Z])/g, '$1-').toLowerCase());
+}
+
+spinalCase('This Is Spinal Tap');
+spinalCase("thisIsSpinalTap")
+spinalCase("The_Andy_Griffith_Show")
+spinalCase("Teletubbies say Eh-oh")
