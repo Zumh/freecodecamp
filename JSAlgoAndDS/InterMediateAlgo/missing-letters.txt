@@ -1,0 +1,24 @@
+/*
+Intermediate Algorithm Scripting: Missing letters
+Find the missing letter in the passed letter range and return it.
+
+If all letters are present in the range, return undefined.
+*/
+function fearNotLetter(str) {
+  var prevAscii = 0;
+  var nextAscii = 0;
+  
+  // convert the char
+  for (let i  = 0; i < str.length; i++){
+    nextAscii = str.charCodeAt(i+1);
+    prevAscii = nextAscii - str.charCodeAt(i);
+   
+    if (prevAscii > 1){
+       
+        return( String.fromCharCode(str.charCodeAt(i)+1)) 
+    }
+  }
+  return;
+}
+fearNotLetter("abcdefghjklmno")
+fearNotLetter("abce");
