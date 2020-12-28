@@ -1,0 +1,34 @@
+/*
+Intermediate Algorithm Scripting: Convert HTML Entities
+Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+*/
+function convertHTML(str) {
+  var signs = [""]
+  //str = str.split("");
+  str = str.replace(/&|<|>|"|'/ig, function ($0) // $3, $4... $n for captures
+{
+    switch($0)
+    {
+      case "&":
+      return "&amp;";
+      case "<":
+      return "&lt;";
+      case ">":
+      return "&gt;";
+      case "'":
+      return "&apos;";
+      case "\"":
+      return "&quot;";
+      
+    }
+        
+    
+});
+   
+  //str = str.join("");
+return(str);
+}
+convertHTML('Stuff in "quotation marks"')
+convertHTML("Sixty > twelve")
+convertHTML("Hamburgers < Pizza < Tacos")
+convertHTML("Dolce & Gabbana");
