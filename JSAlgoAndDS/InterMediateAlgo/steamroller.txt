@@ -1,0 +1,14 @@
+/*
+Intermediate Algorithm Scripting: Steamroller
+Flatten a nested array. You must account for varying levels of nesting.
+.reduce have an empty array that i can return or push to.
+concatnate all the array that is not array.
+*/
+function steamrollArray(arr) {
+  return(arr.reduce(function(current, next){
+    return current.concat(Array.isArray(next) ? steamrollArray(next): next);
+  },[]));
+
+}
+
+console.log(steamrollArray([1, [2], [3, [[4]]]]));
